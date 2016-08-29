@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8BC150F1D7489CC00CCB268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */; };
+		F8BC15111D7489CC00CCB268 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15101D7489CC00CCB268 /* GameScene.sks */; };
+		F8BC15131D7489CC00CCB268 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15121D7489CC00CCB268 /* GameScene.swift */; };
+		F8BC15151D7489CC00CCB268 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15141D7489CC00CCB268 /* GameViewController.swift */; };
+		F8BC15181D7489CC00CCB268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15161D7489CC00CCB268 /* Main.storyboard */; };
+		F8BC151A1D7489CC00CCB268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15191D7489CC00CCB268 /* Assets.xcassets */; };
+		F8BC151D1D7489CC00CCB268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BC151B1D7489CC00CCB268 /* LaunchScreen.storyboard */; };
+		F8BC15281D7489CC00CCB268 /* BrexitGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15271D7489CC00CCB268 /* BrexitGameTests.swift */; };
+		F8BC15331D7489CC00CCB268 /* BrexitGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15321D7489CC00CCB268 /* BrexitGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8BC15241D7489CC00CCB268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8BC15031D7489CC00CCB268 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8BC150A1D7489CC00CCB268;
+			remoteInfo = BrexitGame;
+		};
+		F8BC152F1D7489CC00CCB268 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8BC15031D7489CC00CCB268 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8BC150A1D7489CC00CCB268;
+			remoteInfo = BrexitGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8BC150B1D7489CC00CCB268 /* BrexitGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrexitGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8BC15101D7489CC00CCB268 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F8BC15121D7489CC00CCB268 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F8BC15141D7489CC00CCB268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F8BC15171D7489CC00CCB268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8BC15191D7489CC00CCB268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8BC151C1D7489CC00CCB268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8BC151E1D7489CC00CCB268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8BC15231D7489CC00CCB268 /* BrexitGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrexitGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BC15271D7489CC00CCB268 /* BrexitGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrexitGameTests.swift; sourceTree = "<group>"; };
+		F8BC15291D7489CC00CCB268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8BC152E1D7489CC00CCB268 /* BrexitGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrexitGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BC15321D7489CC00CCB268 /* BrexitGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrexitGameUITests.swift; sourceTree = "<group>"; };
+		F8BC15341D7489CC00CCB268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8BC15081D7489CC00CCB268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC15201D7489CC00CCB268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC152B1D7489CC00CCB268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8BC15021D7489CC00CCB268 = {
+			isa = PBXGroup;
+			children = (
+				F8BC150D1D7489CC00CCB268 /* BrexitGame */,
+				F8BC15261D7489CC00CCB268 /* BrexitGameTests */,
+				F8BC15311D7489CC00CCB268 /* BrexitGameUITests */,
+				F8BC150C1D7489CC00CCB268 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8BC150C1D7489CC00CCB268 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8BC150B1D7489CC00CCB268 /* BrexitGame.app */,
+				F8BC15231D7489CC00CCB268 /* BrexitGameTests.xctest */,
+				F8BC152E1D7489CC00CCB268 /* BrexitGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8BC150D1D7489CC00CCB268 /* BrexitGame */ = {
+			isa = PBXGroup;
+			children = (
+				F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */,
+				F8BC15101D7489CC00CCB268 /* GameScene.sks */,
+				F8BC15121D7489CC00CCB268 /* GameScene.swift */,
+				F8BC15141D7489CC00CCB268 /* GameViewController.swift */,
+				F8BC15161D7489CC00CCB268 /* Main.storyboard */,
+				F8BC15191D7489CC00CCB268 /* Assets.xcassets */,
+				F8BC151B1D7489CC00CCB268 /* LaunchScreen.storyboard */,
+				F8BC151E1D7489CC00CCB268 /* Info.plist */,
+			);
+			path = BrexitGame;
+			sourceTree = "<group>";
+		};
+		F8BC15261D7489CC00CCB268 /* BrexitGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8BC15271D7489CC00CCB268 /* BrexitGameTests.swift */,
+				F8BC15291D7489CC00CCB268 /* Info.plist */,
+			);
+			path = BrexitGameTests;
+			sourceTree = "<group>";
+		};
+		F8BC15311D7489CC00CCB268 /* BrexitGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8BC15321D7489CC00CCB268 /* BrexitGameUITests.swift */,
+				F8BC15341D7489CC00CCB268 /* Info.plist */,
+			);
+			path = BrexitGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8BC150A1D7489CC00CCB268 /* BrexitGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BC15371D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGame" */;
+			buildPhases = (
+				F8BC15071D7489CC00CCB268 /* Sources */,
+				F8BC15081D7489CC00CCB268 /* Frameworks */,
+				F8BC15091D7489CC00CCB268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrexitGame;
+			productName = BrexitGame;
+			productReference = F8BC150B1D7489CC00CCB268 /* BrexitGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8BC15221D7489CC00CCB268 /* BrexitGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BC153A1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameTests" */;
+			buildPhases = (
+				F8BC151F1D7489CC00CCB268 /* Sources */,
+				F8BC15201D7489CC00CCB268 /* Frameworks */,
+				F8BC15211D7489CC00CCB268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8BC15251D7489CC00CCB268 /* PBXTargetDependency */,
+			);
+			name = BrexitGameTests;
+			productName = BrexitGameTests;
+			productReference = F8BC15231D7489CC00CCB268 /* BrexitGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8BC152D1D7489CC00CCB268 /* BrexitGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BC153D1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameUITests" */;
+			buildPhases = (
+				F8BC152A1D7489CC00CCB268 /* Sources */,
+				F8BC152B1D7489CC00CCB268 /* Frameworks */,
+				F8BC152C1D7489CC00CCB268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8BC15301D7489CC00CCB268 /* PBXTargetDependency */,
+			);
+			name = BrexitGameUITests;
+			productName = BrexitGameUITests;
+			productReference = F8BC152E1D7489CC00CCB268 /* BrexitGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8BC15031D7489CC00CCB268 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Saurabh Sikka";
+				TargetAttributes = {
+					F8BC150A1D7489CC00CCB268 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XSB6YPP53Z;
+					};
+					F8BC15221D7489CC00CCB268 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XSB6YPP53Z;
+						TestTargetID = F8BC150A1D7489CC00CCB268;
+					};
+					F8BC152D1D7489CC00CCB268 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XSB6YPP53Z;
+						TestTargetID = F8BC150A1D7489CC00CCB268;
+					};
+				};
+			};
+			buildConfigurationList = F8BC15061D7489CC00CCB268 /* Build configuration list for PBXProject "BrexitGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8BC15021D7489CC00CCB268;
+			productRefGroup = F8BC150C1D7489CC00CCB268 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8BC150A1D7489CC00CCB268 /* BrexitGame */,
+				F8BC15221D7489CC00CCB268 /* BrexitGameTests */,
+				F8BC152D1D7489CC00CCB268 /* BrexitGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8BC15091D7489CC00CCB268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BC15111D7489CC00CCB268 /* GameScene.sks in Resources */,
+				F8BC151D1D7489CC00CCB268 /* LaunchScreen.storyboard in Resources */,
+				F8BC151A1D7489CC00CCB268 /* Assets.xcassets in Resources */,
+				F8BC15181D7489CC00CCB268 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC15211D7489CC00CCB268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC152C1D7489CC00CCB268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8BC15071D7489CC00CCB268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BC15131D7489CC00CCB268 /* GameScene.swift in Sources */,
+				F8BC15151D7489CC00CCB268 /* GameViewController.swift in Sources */,
+				F8BC150F1D7489CC00CCB268 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC151F1D7489CC00CCB268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BC15281D7489CC00CCB268 /* BrexitGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BC152A1D7489CC00CCB268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BC15331D7489CC00CCB268 /* BrexitGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8BC15251D7489CC00CCB268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8BC150A1D7489CC00CCB268 /* BrexitGame */;
+			targetProxy = F8BC15241D7489CC00CCB268 /* PBXContainerItemProxy */;
+		};
+		F8BC15301D7489CC00CCB268 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8BC150A1D7489CC00CCB268 /* BrexitGame */;
+			targetProxy = F8BC152F1D7489CC00CCB268 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8BC15161D7489CC00CCB268 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BC15171D7489CC00CCB268 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8BC151B1D7489CC00CCB268 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BC151C1D7489CC00CCB268 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8BC15351D7489CC00CCB268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8BC15361D7489CC00CCB268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8BC15381D7489CC00CCB268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BrexitGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8BC15391D7489CC00CCB268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BrexitGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8BC153B1D7489CC00CCB268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = BrexitGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrexitGame.app/BrexitGame";
+			};
+			name = Debug;
+		};
+		F8BC153C1D7489CC00CCB268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BrexitGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrexitGame.app/BrexitGame";
+			};
+			name = Release;
+		};
+		F8BC153E1D7489CC00CCB268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = BrexitGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BrexitGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F8BC153F1D7489CC00CCB268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BrexitGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saurabhsikka.BrexitGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BrexitGame;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8BC15061D7489CC00CCB268 /* Build configuration list for PBXProject "BrexitGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BC15351D7489CC00CCB268 /* Debug */,
+				F8BC15361D7489CC00CCB268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8BC15371D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BC15381D7489CC00CCB268 /* Debug */,
+				F8BC15391D7489CC00CCB268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8BC153A1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BC153B1D7489CC00CCB268 /* Debug */,
+				F8BC153C1D7489CC00CCB268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8BC153D1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BC153E1D7489CC00CCB268 /* Debug */,
+				F8BC153F1D7489CC00CCB268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8BC15031D7489CC00CCB268 /* Project object */;
+}
