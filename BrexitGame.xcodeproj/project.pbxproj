@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F8BC150F1D7489CC00CCB268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */; };
-		F8BC15111D7489CC00CCB268 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15101D7489CC00CCB268 /* GameScene.sks */; };
 		F8BC15131D7489CC00CCB268 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15121D7489CC00CCB268 /* GameScene.swift */; };
 		F8BC15151D7489CC00CCB268 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15141D7489CC00CCB268 /* GameViewController.swift */; };
 		F8BC15181D7489CC00CCB268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15161D7489CC00CCB268 /* Main.storyboard */; };
@@ -16,6 +15,31 @@
 		F8BC151D1D7489CC00CCB268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BC151B1D7489CC00CCB268 /* LaunchScreen.storyboard */; };
 		F8BC15281D7489CC00CCB268 /* BrexitGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15271D7489CC00CCB268 /* BrexitGameTests.swift */; };
 		F8BC15331D7489CC00CCB268 /* BrexitGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15321D7489CC00CCB268 /* BrexitGameUITests.swift */; };
+		F8BC15501D74938C00CCB268 /* boris.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8BC154B1D74938C00CCB268 /* boris.atlas */; };
+		F8BC15511D74938C00CCB268 /* enemies.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8BC154C1D74938C00CCB268 /* enemies.atlas */; };
+		F8BC15521D74938C00CCB268 /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8BC154D1D74938C00CCB268 /* goods.atlas */; };
+		F8BC15531D74938C00CCB268 /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8BC154E1D74938C00CCB268 /* ground.atlas */; };
+		F8BC15541D74938C00CCB268 /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8BC154F1D74938C00CCB268 /* hud.atlas */; };
+		F8BC15561D74967D00CCB268 /* GameSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15551D74967D00CCB268 /* GameSprite.swift */; };
+		F8BC15581D7496EB00CCB268 /* BorisPath.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15571D7496EB00CCB268 /* BorisPath.sks */; };
+		F8BC155A1D74970600CCB268 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15591D74970600CCB268 /* Background.swift */; };
+		F8BC155C1D7497AC00CCB268 /* immigrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC155B1D7497AC00CCB268 /* immigrant.swift */; };
+		F8BC155E1D749B8D00CCB268 /* Juncker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC155D1D749B8D00CCB268 /* Juncker.swift */; };
+		F8BC15601D749C6400CCB268 /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC155F1D749C6400CCB268 /* Blade.swift */; };
+		F8BC15621D749C8500CCB268 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15611D749C8500CCB268 /* Coin.swift */; };
+		F8BC15641D749CC900CCB268 /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15631D749CC900CCB268 /* EncounterManager.swift */; };
+		F8BC15661D749EB600CCB268 /* Cameron.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15651D749EB600CCB268 /* Cameron.swift */; };
+		F8BC15681D749EFB00CCB268 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15671D749EFB00CCB268 /* Ground.swift */; };
+		F8BC156A1D749F1300CCB268 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15691D749F1300CCB268 /* HUD.swift */; };
+		F8BC156C1D749F3900CCB268 /* Gove.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC156B1D749F3900CCB268 /* Gove.swift */; };
+		F8BC156E1D749FD800CCB268 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC156D1D749FD800CCB268 /* MenuScene.swift */; };
+		F8BC15701D74A01900CCB268 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC156F1D74A01900CCB268 /* Player.swift */; };
+		F8BC15721D74A04300CCB268 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BC15711D74A04300CCB268 /* Star.swift */; };
+		F8BC15741D74A5CE00CCB268 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15731D74A5CE00CCB268 /* spark.png */; };
+		F8BC15791D74A71F00CCB268 /* EncounterCoins.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15761D74A71F00CCB268 /* EncounterCoins.sks */; };
+		F8BC157A1D74A72000CCB268 /* EncounterImmigrants.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15771D74A71F00CCB268 /* EncounterImmigrants.sks */; };
+		F8BC157B1D74A72000CCB268 /* EncounterJuncker.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15781D74A71F00CCB268 /* EncounterJuncker.sks */; };
+		F8BC15811D74BA5200CCB268 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = F8BC15801D74BA5200CCB268 /* Sound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +62,6 @@
 /* Begin PBXFileReference section */
 		F8BC150B1D7489CC00CCB268 /* BrexitGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrexitGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8BC15101D7489CC00CCB268 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F8BC15121D7489CC00CCB268 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F8BC15141D7489CC00CCB268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F8BC15171D7489CC00CCB268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +74,31 @@
 		F8BC152E1D7489CC00CCB268 /* BrexitGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrexitGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BC15321D7489CC00CCB268 /* BrexitGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrexitGameUITests.swift; sourceTree = "<group>"; };
 		F8BC15341D7489CC00CCB268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8BC154B1D74938C00CCB268 /* boris.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = boris.atlas; sourceTree = "<group>"; };
+		F8BC154C1D74938C00CCB268 /* enemies.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = enemies.atlas; sourceTree = "<group>"; };
+		F8BC154D1D74938C00CCB268 /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
+		F8BC154E1D74938C00CCB268 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ground.atlas; sourceTree = "<group>"; };
+		F8BC154F1D74938C00CCB268 /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hud.atlas; sourceTree = "<group>"; };
+		F8BC15551D74967D00CCB268 /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
+		F8BC15571D7496EB00CCB268 /* BorisPath.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BorisPath.sks; sourceTree = "<group>"; };
+		F8BC15591D74970600CCB268 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		F8BC155B1D7497AC00CCB268 /* immigrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = immigrant.swift; sourceTree = "<group>"; };
+		F8BC155D1D749B8D00CCB268 /* Juncker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Juncker.swift; sourceTree = "<group>"; };
+		F8BC155F1D749C6400CCB268 /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
+		F8BC15611D749C8500CCB268 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		F8BC15631D749CC900CCB268 /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		F8BC15651D749EB600CCB268 /* Cameron.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cameron.swift; sourceTree = "<group>"; };
+		F8BC15671D749EFB00CCB268 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		F8BC15691D749F1300CCB268 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		F8BC156B1D749F3900CCB268 /* Gove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gove.swift; sourceTree = "<group>"; };
+		F8BC156D1D749FD800CCB268 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		F8BC156F1D74A01900CCB268 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F8BC15711D74A04300CCB268 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		F8BC15731D74A5CE00CCB268 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F8BC15761D74A71F00CCB268 /* EncounterCoins.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterCoins.sks; sourceTree = "<group>"; };
+		F8BC15771D74A71F00CCB268 /* EncounterImmigrants.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterImmigrants.sks; sourceTree = "<group>"; };
+		F8BC15781D74A71F00CCB268 /* EncounterJuncker.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterJuncker.sks; sourceTree = "<group>"; };
+		F8BC15801D74BA5200CCB268 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +149,36 @@
 		F8BC150D1D7489CC00CCB268 /* BrexitGame */ = {
 			isa = PBXGroup;
 			children = (
+				F8BC15801D74BA5200CCB268 /* Sound */,
+				F8BC15751D74A71100CCB268 /* Encounters */,
+				F8BC154B1D74938C00CCB268 /* boris.atlas */,
+				F8BC154C1D74938C00CCB268 /* enemies.atlas */,
+				F8BC154D1D74938C00CCB268 /* goods.atlas */,
+				F8BC154E1D74938C00CCB268 /* ground.atlas */,
+				F8BC154F1D74938C00CCB268 /* hud.atlas */,
 				F8BC150E1D7489CC00CCB268 /* AppDelegate.swift */,
-				F8BC15101D7489CC00CCB268 /* GameScene.sks */,
+				F8BC15591D74970600CCB268 /* Background.swift */,
+				F8BC15731D74A5CE00CCB268 /* spark.png */,
+				F8BC15571D7496EB00CCB268 /* BorisPath.sks */,
 				F8BC15121D7489CC00CCB268 /* GameScene.swift */,
 				F8BC15141D7489CC00CCB268 /* GameViewController.swift */,
+				F8BC15551D74967D00CCB268 /* GameSprite.swift */,
 				F8BC15161D7489CC00CCB268 /* Main.storyboard */,
 				F8BC15191D7489CC00CCB268 /* Assets.xcassets */,
 				F8BC151B1D7489CC00CCB268 /* LaunchScreen.storyboard */,
 				F8BC151E1D7489CC00CCB268 /* Info.plist */,
+				F8BC155B1D7497AC00CCB268 /* immigrant.swift */,
+				F8BC155D1D749B8D00CCB268 /* Juncker.swift */,
+				F8BC155F1D749C6400CCB268 /* Blade.swift */,
+				F8BC15611D749C8500CCB268 /* Coin.swift */,
+				F8BC15631D749CC900CCB268 /* EncounterManager.swift */,
+				F8BC15651D749EB600CCB268 /* Cameron.swift */,
+				F8BC15671D749EFB00CCB268 /* Ground.swift */,
+				F8BC15691D749F1300CCB268 /* HUD.swift */,
+				F8BC156B1D749F3900CCB268 /* Gove.swift */,
+				F8BC156D1D749FD800CCB268 /* MenuScene.swift */,
+				F8BC156F1D74A01900CCB268 /* Player.swift */,
+				F8BC15711D74A04300CCB268 /* Star.swift */,
 			);
 			path = BrexitGame;
 			sourceTree = "<group>";
@@ -129,6 +199,16 @@
 				F8BC15341D7489CC00CCB268 /* Info.plist */,
 			);
 			path = BrexitGameUITests;
+			sourceTree = "<group>";
+		};
+		F8BC15751D74A71100CCB268 /* Encounters */ = {
+			isa = PBXGroup;
+			children = (
+				F8BC15761D74A71F00CCB268 /* EncounterCoins.sks */,
+				F8BC15771D74A71F00CCB268 /* EncounterImmigrants.sks */,
+				F8BC15781D74A71F00CCB268 /* EncounterJuncker.sks */,
+			);
+			name = Encounters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,10 +318,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BC15111D7489CC00CCB268 /* GameScene.sks in Resources */,
+				F8BC15581D7496EB00CCB268 /* BorisPath.sks in Resources */,
+				F8BC157A1D74A72000CCB268 /* EncounterImmigrants.sks in Resources */,
+				F8BC15501D74938C00CCB268 /* boris.atlas in Resources */,
+				F8BC157B1D74A72000CCB268 /* EncounterJuncker.sks in Resources */,
 				F8BC151D1D7489CC00CCB268 /* LaunchScreen.storyboard in Resources */,
+				F8BC15741D74A5CE00CCB268 /* spark.png in Resources */,
+				F8BC15531D74938C00CCB268 /* ground.atlas in Resources */,
+				F8BC15791D74A71F00CCB268 /* EncounterCoins.sks in Resources */,
+				F8BC15541D74938C00CCB268 /* hud.atlas in Resources */,
 				F8BC151A1D7489CC00CCB268 /* Assets.xcassets in Resources */,
 				F8BC15181D7489CC00CCB268 /* Main.storyboard in Resources */,
+				F8BC15511D74938C00CCB268 /* enemies.atlas in Resources */,
+				F8BC15521D74938C00CCB268 /* goods.atlas in Resources */,
+				F8BC15811D74BA5200CCB268 /* Sound in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +356,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BC15621D749C8500CCB268 /* Coin.swift in Sources */,
+				F8BC15561D74967D00CCB268 /* GameSprite.swift in Sources */,
+				F8BC156C1D749F3900CCB268 /* Gove.swift in Sources */,
 				F8BC15131D7489CC00CCB268 /* GameScene.swift in Sources */,
+				F8BC15701D74A01900CCB268 /* Player.swift in Sources */,
+				F8BC15721D74A04300CCB268 /* Star.swift in Sources */,
 				F8BC15151D7489CC00CCB268 /* GameViewController.swift in Sources */,
 				F8BC150F1D7489CC00CCB268 /* AppDelegate.swift in Sources */,
+				F8BC155C1D7497AC00CCB268 /* immigrant.swift in Sources */,
+				F8BC15681D749EFB00CCB268 /* Ground.swift in Sources */,
+				F8BC156A1D749F1300CCB268 /* HUD.swift in Sources */,
+				F8BC15661D749EB600CCB268 /* Cameron.swift in Sources */,
+				F8BC155E1D749B8D00CCB268 /* Juncker.swift in Sources */,
+				F8BC15641D749CC900CCB268 /* EncounterManager.swift in Sources */,
+				F8BC156E1D749FD800CCB268 /* MenuScene.swift in Sources */,
+				F8BC15601D749C6400CCB268 /* Blade.swift in Sources */,
+				F8BC155A1D74970600CCB268 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +599,7 @@
 				F8BC15391D7489CC00CCB268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8BC153A1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +608,7 @@
 				F8BC153C1D7489CC00CCB268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8BC153D1D7489CC00CCB268 /* Build configuration list for PBXNativeTarget "BrexitGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +617,7 @@
 				F8BC153F1D7489CC00CCB268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
