@@ -1,0 +1,21 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "26c11a6fa33402500ea57345fd9ef722"
+build_time: [525811904, 66296000]
+inputs:
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/AppDelegate.swift": [525799116, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Star.swift": [525805068, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Background.swift": [525802537, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Coin.swift": [525811904, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/GameViewController.swift": [525811493, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Ground.swift": [525806792, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/GameSprite.swift": [525802386, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/HUD.swift": [525804580, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/immigrant.swift": [525810675, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Gove.swift": [525810429, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Juncker.swift": [525811852, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/GameScene.swift": [525809302, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Cameron.swift": [525810946, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Blade.swift": [525811677, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/EncounterManager.swift": [525805978, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/Player.swift": [525811851, 0]
+  "/Users/saurabhsikka/Documents/Developer/BrexitGame/BrexitGame/MenuScene.swift": [525811493, 0]
