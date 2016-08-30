@@ -71,7 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgrounds[3].spawn(world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
         
         // Play the start sound:
-        self.runAction(SKAction.playSoundFileNamed("Sound/BackgroundMusic.m4a", waitForCompletion: false))
+        self.runAction(SKAction.playSoundFileNamed("Sound/Powerup.aif", waitForCompletion: false))
     }
     
     override func didSimulatePhysics() {

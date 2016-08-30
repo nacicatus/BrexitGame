@@ -61,7 +61,7 @@ class HUD: SKNode {
         restartButton.position = centerOfHud
         menuButton.position = CGPoint(x: centerOfHud.x - 140, y: centerOfHud.y)
         // Size the button nodes:
-        restartButton.size = CGSize(width: 140, height: 140)
+        restartButton.size = CGSize(width: 70, height: 70)
         menuButton.size = CGSize(width: 70, height: 70)
     }
     

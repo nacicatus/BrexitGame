@@ -127,7 +127,7 @@ class Player : SKSpriteNode, GameSprite {
             SKAction.repeatAction(fastFade, count: 5),
             SKAction.fadeAlphaTo(1, duration: 0.15)
             ])
-        // Return the penguin to normal:
+        // Return Boris to normal:
         let damageEnd = SKAction.runBlock {
             self.physicsBody?.categoryBitMask = PhysicsCategory.politician.rawValue
             // Collide with everything again:
@@ -161,11 +161,11 @@ class Player : SKSpriteNode, GameSprite {
         
         self.dieAnimation = SKAction.sequence([
             startDie,
-            // Scale the penguin bigger:
+            // Scale Boris bigger:
             SKAction.scaleTo(2.2, duration: 0.5),
             // Use the waitForDuration action to provide a short pause:
             SKAction.waitForDuration(0.5),
-            // Rotate the penguin on to his back:
+            // Rotate Boris
             SKAction.rotateToAngle(3, duration: 1.5),
             SKAction.waitForDuration(0.5),
             endDie

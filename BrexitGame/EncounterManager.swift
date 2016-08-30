@@ -51,6 +51,9 @@ class EncounterManager {
                         case "BronzeCoin":
                             let coin = Coin()
                             coin.spawn(encounter, position: node.position)
+                        case "Star":
+                            let star = Star()
+                            star.spawn(encounter, position: node.position)
                         default:
                             print("Encounter node name not found: \(node.name)")
                         }
