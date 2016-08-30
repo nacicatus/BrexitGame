@@ -7,37 +7,38 @@ provides-member:
 - ["C10BrexitGame16EncounterManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "print"
-- !private "Blade"
-- "Int"
-- !private "Gove"
-- !private "arc4random_uniform"
-- !private "CGVector"
-- "StringLiteralType"
-- !private "~="
-- !private "=="
-- !private "Coin"
-- !private "..."
 - !private "SKScene"
-- !private "+"
-- !private "CGPoint"
-- !private "NSValue"
-- !private "BooleanLiteralType"
-- !private "<"
-- !private "Immigrant"
-- !private "-"
-- "String"
-- "SKNode"
-- !private "SKSpriteNode"
-- "CGFloat"
-- !private "Cameron"
-- !private "*"
-- !private "UInt32"
-- !private "Dictionary"
-- !private "Bool"
 - !private "Juncker"
-- "EncounterManager"
+- !private "Coin"
+- "Int"
+- !private "Cameron"
+- "String"
+- !private "BooleanLiteralType"
+- !private "Gove"
+- !private "..."
+- !private "Bool"
+- !private "<"
+- !private "arc4random_uniform"
+- !private "+"
+- !private "NSValue"
 - !private "||"
+- !private "=="
+- !private "~="
+- !private "Immigrant"
+- !private "Dictionary"
+- "CGFloat"
+- !private "CGVector"
+- !private "Blade"
+- !private "-"
+- "EncounterManager"
+- !private "SKSpriteNode"
+- !private "CGPoint"
+- !private "*"
+- !private "print"
+- "SKNode"
+- !private "UInt32"
+- "StringLiteralType"
+- !private "Star"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["PSs16AbsoluteValuable", "Stride"]
@@ -55,6 +56,7 @@ depends-member:
 - !private ["PSs9AnyObject", "NSValue"]
 - !private ["PSs9AnyObject", "SKNode"]
 - !private ["PSs9AnyObject", "SKScene"]
+- !private ["PSs9AnyObject", "Star"]
 - !private ["PSs9AnyObject", "UInt32"]
 - !private ["PSs9AnyObject", "Value"]
 - !private ["PSs9AnyObject", "addChild"]
@@ -218,6 +220,7 @@ depends-member:
 - ["C10BrexitGame16EncounterManager", "SKNode"]
 - !private ["C10BrexitGame16EncounterManager", "SKScene"]
 - !private ["C10BrexitGame16EncounterManager", "SKSpriteNode"]
+- !private ["C10BrexitGame16EncounterManager", "Star"]
 - ["C10BrexitGame16EncounterManager", "String"]
 - !private ["C10BrexitGame16EncounterManager", "UInt32"]
 - ["C10BrexitGame16EncounterManager", "addEncountersToWorld"]
@@ -518,6 +521,9 @@ depends-member:
 - !private ["VSs5Slice", "Index"]
 - !private ["VSs5Slice", "SubSequence"]
 - !private ["VSs5Slice", "_Element"]
+- !private ["C10BrexitGame4Star", "deinit"]
+- !private ["C10BrexitGame4Star", "init"]
+- !private ["C10BrexitGame4Star", "spawn"]
 - !private ["PSs10Streamable", "init"]
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
@@ -729,6 +735,7 @@ depends-nominal:
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
 - !private "VSs5Slice"
+- !private "C10BrexitGame4Star"
 - !private "PSs10Streamable"
 - !private "PSs10Strideable"
 - !private "SS"

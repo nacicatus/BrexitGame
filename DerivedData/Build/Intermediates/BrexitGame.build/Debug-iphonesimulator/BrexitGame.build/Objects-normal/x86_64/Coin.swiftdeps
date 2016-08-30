@@ -6,29 +6,29 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame4Coin", ""]
 provides-dynamic-lookup:
-- "textureAtlas"
-- "collect"
 - "coinSound"
-- "value"
+- "turnToGold"
+- "textureAtlas"
 - "spawn"
 - "onTap"
-- "turnToGold"
+- "value"
+- "collect"
 depends-top-level:
-- !private "CGVector"
-- !private "Array"
-- "GameSprite"
-- "SKTextureAtlas"
-- "SKAction"
-- "CGPoint"
-- "StringLiteralType"
 - "CGSize"
 - "SKSpriteNode"
-- "SKNode"
-- !private "PhysicsCategory"
 - "BooleanLiteralType"
+- "CGPoint"
+- "SKNode"
+- "SKTextureAtlas"
+- "GameSprite"
+- "SKAction"
+- !private "Array"
 - !private "/"
-- "Coin"
+- !private "PhysicsCategory"
+- "StringLiteralType"
+- !private "CGVector"
 - !private "SKPhysicsBody"
+- "Coin"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "CGVector"]

@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
-- "applicationWillResignActive"
-- "applicationDidEnterBackground"
-- "applicationWillEnterForeground"
-- "application"
 - "window"
+- "application"
 - "applicationDidBecomeActive"
+- "applicationWillEnterForeground"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "applicationWillResignActive"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "Bool"
-- "AppDelegate"
-- "AnyObject"
 - "UIApplication"
-- "UIWindow"
 - "UIApplicationDelegate"
 - "NSObject"
 - "UIResponder"
+- !private "BooleanLiteralType"
+- "Bool"
+- "AnyObject"
+- "UIWindow"
+- "AppDelegate"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]

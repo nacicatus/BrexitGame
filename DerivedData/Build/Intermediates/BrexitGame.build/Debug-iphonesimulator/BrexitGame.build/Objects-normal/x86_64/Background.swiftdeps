@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame10Background", ""]
 provides-dynamic-lookup:
-- "backgroundSize"
 - "movementMultiplier"
 - "updatePosition"
+- "backgroundSize"
 - "spawn"
 - "jumpAdjustment"
 depends-top-level:
 - "CGSize"
-- "SKSpriteNode"
-- "CGFloat"
-- !private "CGPoint"
-- "String"
-- "SKNode"
-- !private ">"
-- !private "-"
-- !private "*"
 - !private "CGPointZero"
-- !private "+="
+- "SKSpriteNode"
+- !private "CGPoint"
+- "SKNode"
+- !private "*"
+- !private "-"
 - !private "Int"
+- !private ">"
 - !private "+"
-- "Background"
+- !private "+="
+- "String"
+- "CGFloat"
 - !private "..."
+- "Background"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["PSs16AbsoluteValuable", "Stride"]

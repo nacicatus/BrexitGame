@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame9Immigrant", ""]
 provides-dynamic-lookup:
-- "spawn"
-- "onTap"
 - "createAnimations"
 - "flyAnimation"
+- "spawn"
 - "textureAtlas"
+- "onTap"
 depends-top-level:
+- !private "/"
 - "StringLiteralType"
+- !private "SKPhysicsBody"
 - !private "SKTexture"
-- !private "~"
-- "SKTextureAtlas"
+- !private "PhysicsCategory"
 - "GameSprite"
 - "SKAction"
-- !private "SKPhysicsBody"
-- "CGSize"
-- "CGPoint"
-- !private "/"
-- "SKSpriteNode"
-- "SKNode"
-- !private "PhysicsCategory"
+- "SKTextureAtlas"
 - "Immigrant"
+- "SKNode"
 - !private "BooleanLiteralType"
+- "CGSize"
+- !private "~"
+- "CGPoint"
+- "SKSpriteNode"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]
