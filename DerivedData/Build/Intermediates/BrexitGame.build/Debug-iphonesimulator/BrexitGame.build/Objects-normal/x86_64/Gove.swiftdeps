@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame4Gove", ""]
 provides-dynamic-lookup:
-- "createAnimations"
 - "textureAtlas"
-- "onTap"
 - "flyAnimation"
+- "createAnimations"
+- "onTap"
 - "spawn"
 depends-top-level:
 - "SKNode"
-- !private "BooleanLiteralType"
-- !private "SKTexture"
-- "Gove"
 - "CGSize"
 - "CGPoint"
 - "SKSpriteNode"
+- !private "BooleanLiteralType"
 - "GameSprite"
 - "SKAction"
+- !private "SKTexture"
 - "SKTextureAtlas"
-- !private "SKPhysicsBody"
-- "StringLiteralType"
 - !private "~"
+- "Gove"
+- !private "SKPhysicsBody"
 - !private "PhysicsCategory"
 - !private "/"
+- "StringLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]

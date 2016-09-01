@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame10Background", ""]
 provides-dynamic-lookup:
-- "movementMultiplier"
-- "backgroundSize"
-- "updatePosition"
-- "spawn"
 - "jumpAdjustment"
+- "spawn"
+- "updatePosition"
+- "backgroundSize"
+- "movementMultiplier"
 depends-top-level:
-- !private "CGPointZero"
-- !private "+="
-- "SKNode"
-- !private "CGPoint"
-- "CGSize"
-- "CGFloat"
-- "String"
-- !private "+"
 - "Background"
-- !private "-"
 - !private "..."
-- !private "*"
-- "SKSpriteNode"
+- !private "+"
 - !private ">"
+- "String"
 - !private "Int"
+- "CGSize"
+- !private "CGPoint"
+- "SKSpriteNode"
+- "SKNode"
+- !private "CGPointZero"
+- !private "-"
+- "CGFloat"
+- !private "+="
+- !private "*"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["PSs16AbsoluteValuable", "Stride"]
@@ -518,4 +518,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "bfdfcefc49c8a468e65a2be450cc7d59"
+interface-hash: "bd44de343616d53323e927db849e9479"

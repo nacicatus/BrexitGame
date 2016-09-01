@@ -7,11 +7,11 @@ provides-member:
 - ["P10BrexitGame10GameSprite", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "SKNode"
 - "CGSize"
 - "CGPoint"
-- "GameSprite"
+- "SKNode"
 - "SKTextureAtlas"
+- "GameSprite"
 depends-member:
 - ["P10BrexitGame10GameSprite", "CGPoint"]
 - ["P10BrexitGame10GameSprite", "CGSize"]

@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame7Juncker", ""]
 provides-dynamic-lookup:
-- "textureAtlas"
-- "flyAnimation"
-- "spawn"
-- "createAnimations"
 - "onTap"
+- "spawn"
+- "flyAnimation"
+- "textureAtlas"
+- "createAnimations"
 depends-top-level:
-- "SKTextureAtlas"
-- "SKAction"
-- "Juncker"
-- "GameSprite"
-- !private "SKPhysicsBody"
 - !private "~"
-- "SKSpriteNode"
-- !private "/"
 - "StringLiteralType"
-- !private "PhysicsCategory"
-- "SKNode"
-- "CGPoint"
-- "CGSize"
 - !private "SKTexture"
+- "GameSprite"
+- "SKTextureAtlas"
+- !private "SKPhysicsBody"
+- "SKAction"
+- "CGPoint"
+- "Juncker"
+- "CGSize"
+- !private "/"
+- "SKSpriteNode"
 - !private "BooleanLiteralType"
+- "SKNode"
+- !private "PhysicsCategory"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]

@@ -7,26 +7,26 @@ provides-member:
 - ["C10BrexitGame9MenuScene", ""]
 provides-dynamic-lookup:
 - "didMoveToView"
-- "touchesBegan"
 - "textureAtlas"
 - "startButton"
+- "touchesBegan"
 depends-top-level:
-- !private "GameScene"
-- "SKScene"
-- "Set"
-- !private "CGPoint"
-- "MenuScene"
-- !private "CGSize"
+- "SKSpriteNode"
 - !private "UIColor"
+- !private "GameScene"
+- !private "Array"
+- "SKTextureAtlas"
 - "StringLiteralType"
 - !private "=="
-- "SKTextureAtlas"
 - "UITouch"
+- "MenuScene"
 - !private "SKAction"
-- !private "Array"
-- "SKView"
-- "SKSpriteNode"
+- !private "CGPoint"
+- !private "CGSize"
+- "Set"
 - "UIEvent"
+- "SKScene"
+- "SKView"
 depends-member:
 - !private ["PSs9AnyObject", "CGPoint"]
 - !private ["PSs9AnyObject", "CGSize"]
