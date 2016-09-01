@@ -7,26 +7,26 @@ provides-member:
 - ["C10BrexitGame7Cameron", ""]
 provides-dynamic-lookup:
 - "textureAtlas"
-- "fadeAnimation"
 - "createAnimations"
-- "spawn"
 - "onTap"
+- "spawn"
+- "fadeAnimation"
 depends-top-level:
 - "CGPoint"
-- !private "BooleanLiteralType"
 - "CGSize"
 - "SKSpriteNode"
 - "SKNode"
+- !private "Array"
+- "StringLiteralType"
 - !private "~"
 - "GameSprite"
 - "SKTextureAtlas"
-- "Cameron"
 - "SKAction"
-- !private "SKPhysicsBody"
-- !private "PhysicsCategory"
-- !private "Array"
-- "StringLiteralType"
 - !private "/"
+- !private "PhysicsCategory"
+- !private "SKPhysicsBody"
+- !private "BooleanLiteralType"
+- "Cameron"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]

@@ -7,25 +7,25 @@ provides-member:
 - ["C10BrexitGame5Blade", ""]
 provides-dynamic-lookup:
 - "textureAtlas"
+- "spinAnimation"
 - "onTap"
 - "spawn"
-- "spinAnimation"
 - "createAnimations"
 depends-top-level:
-- "StringLiteralType"
-- !private "~"
 - "GameSprite"
 - "SKTextureAtlas"
+- !private "SKPhysicsBody"
+- !private "~"
 - "SKAction"
 - "CGPoint"
 - "CGSize"
-- "Blade"
+- "StringLiteralType"
 - !private "SKTexture"
 - "SKSpriteNode"
 - "SKNode"
-- !private "BooleanLiteralType"
-- !private "SKPhysicsBody"
 - !private "PhysicsCategory"
+- "Blade"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]

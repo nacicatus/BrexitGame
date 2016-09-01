@@ -7,25 +7,25 @@ provides-member:
 - ["C10BrexitGame4Star", ""]
 provides-dynamic-lookup:
 - "textureAtlas"
-- "onTap"
 - "pulseAnimation"
-- "spawn"
 - "createAnimations"
+- "spawn"
+- "onTap"
 depends-top-level:
+- "StringLiteralType"
 - "GameSprite"
-- !private "BooleanLiteralType"
 - "SKAction"
 - "SKTextureAtlas"
-- !private "SKPhysicsBody"
-- !private "/"
-- "SKSpriteNode"
-- "Star"
 - "SKNode"
-- "CGPoint"
 - "CGSize"
-- "StringLiteralType"
+- "SKSpriteNode"
+- "CGPoint"
 - !private "PhysicsCategory"
 - !private "Array"
+- "Star"
+- !private "/"
+- !private "BooleanLiteralType"
+- !private "SKPhysicsBody"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]

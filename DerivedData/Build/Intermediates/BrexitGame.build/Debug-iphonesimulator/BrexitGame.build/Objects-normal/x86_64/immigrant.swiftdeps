@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C10BrexitGame9Immigrant", ""]
 provides-dynamic-lookup:
-- "createAnimations"
 - "flyAnimation"
-- "spawn"
 - "textureAtlas"
+- "createAnimations"
+- "spawn"
 - "onTap"
 depends-top-level:
-- !private "/"
-- "StringLiteralType"
-- !private "SKPhysicsBody"
-- !private "SKTexture"
-- !private "PhysicsCategory"
-- "GameSprite"
-- "SKAction"
-- "SKTextureAtlas"
-- "Immigrant"
-- "SKNode"
-- !private "BooleanLiteralType"
 - "CGSize"
+- "SKSpriteNode"
 - !private "~"
 - "CGPoint"
-- "SKSpriteNode"
+- "SKNode"
+- "Immigrant"
+- "StringLiteralType"
+- "SKTextureAtlas"
+- "GameSprite"
+- "SKAction"
+- !private "/"
+- !private "PhysicsCategory"
+- !private "SKPhysicsBody"
+- !private "BooleanLiteralType"
+- !private "SKTexture"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "PhysicsCategory"]
@@ -410,4 +410,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "8a526df1253da70b18d1658f7379939e"
+interface-hash: "4d62f3d69157bde878fd8ad75e030f28"
