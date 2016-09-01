@@ -14,7 +14,7 @@ class Background: SKSpriteNode {
     // how fast the background should move past.
     // 0 is full adjustment, no movement as the world goes past
     // 1 is no adjustment, background passes at normal speed
-    var movementMultiplier = CGFloat(0)
+    var movementMultiplier = CGFloat(1)
     // Store a jump adjustment amount for looping with parallax positioning
     var jumpAdjustment = CGFloat(0)
     // Constant for background node size:

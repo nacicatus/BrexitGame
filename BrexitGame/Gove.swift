@@ -27,7 +27,7 @@ class Gove: SKSpriteNode, GameSprite {
     func createAnimations() {
         let flyFrames:[SKTexture] = [
             textureAtlas.textureNamed("gove-1.png"),
-            textureAtlas.textureNamed("gove-1.png")
+            textureAtlas.textureNamed("gove-2.png")
         ]
         let flyAction = SKAction.animateWithTextures(flyFrames, timePerFrame: 0.14)
         flyAnimation = SKAction.repeatActionForever(flyAction)

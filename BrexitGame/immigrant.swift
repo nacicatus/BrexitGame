@@ -12,7 +12,7 @@ class Immigrant: SKSpriteNode, GameSprite {
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "enemies.atlas")
     var flyAnimation = SKAction()
     
-    func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 88, height: 48)) {
+    func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 90, height: 50)) {
         parentNode.addChild(self)
         createAnimations()
         self.size = size

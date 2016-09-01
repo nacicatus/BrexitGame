@@ -25,7 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         // Set a sky-blue background color:
-        self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.95, alpha: 1.0)
+        self.backgroundColor = UIColor(red: 0.05, green: 0.5, blue: 0.45, alpha: 1.0)
         
         // Add the world node as a child of the scene:
         self.addChild(world)
