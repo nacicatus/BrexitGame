@@ -18,7 +18,7 @@ class Ground: SKSpriteNode, GameSprite {
         parentNode.addChild(self)
         self.size = size
         self.position = position
-        self.anchorPoint = CGPointMake(0, 1)
+        self.anchorPoint = CGPoint(x: 0, y: 1)
         
         if groundTexture == nil {
             groundTexture = textureAtlas.textureNamed("waves.png");
@@ -31,7 +31,7 @@ class Ground: SKSpriteNode, GameSprite {
         // The top left is X: 0, Y: 0, given our anchor point.
         // The top right is X: size.width, Y: 0
         let pointTopRight = CGPoint(x: size.width, y: 0)
-        self.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointZero, toPoint: pointTopRight)
+        self.physicsBody = SKPhysicsBody(edgeFrom: CGPoint.zero, to: pointTopRight)
         self.physicsBody?.categoryBitMask = PhysicsCategory.ground.rawValue
     }
     
@@ -48,7 +48,7 @@ class Ground: SKSpriteNode, GameSprite {
                 tileNode.anchorPoint = CGPoint(x: 0, y: 1)
                 self.addChild(tileNode)
                 
-                tileCount++
+                tileCount += 1
             }
             
             jumpWidth = tileSize.width * floor(tileCount / 3)
@@ -64,7 +64,7 @@ class Ground: SKSpriteNode, GameSprite {
             // Move the ground forward:
             self.position.x += jumpWidth
             // Add one to the jump count:
-            jumpCount++
+            jumpCount += 1
         }
     }
     

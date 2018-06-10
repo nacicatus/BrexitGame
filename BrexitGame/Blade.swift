@@ -22,11 +22,11 @@ class Blade: SKSpriteNode, GameSprite {
             size: size)
         self.physicsBody?.affectedByGravity = false
         // No dynamic body for the blade, which never moves:
-        self.physicsBody?.dynamic = false
+        self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
         self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPolitician.rawValue
         createAnimations()
-        self.runAction(spinAnimation)
+        self.run(spinAnimation)
     }
     
     func createAnimations() {
@@ -34,8 +34,8 @@ class Blade: SKSpriteNode, GameSprite {
             textureAtlas.textureNamed("blade-1.png"),
             textureAtlas.textureNamed("blade-2.png")
         ]
-        let spinAction = SKAction.animateWithTextures(spinFrames, timePerFrame: 0.5)
-        spinAnimation = SKAction.repeatActionForever(spinAction)
+        let spinAction = SKAction.animate(with: spinFrames, timePerFrame: 0.5)
+        spinAnimation = SKAction.repeatForever(spinAction)
     }
     
     func onTap() {}

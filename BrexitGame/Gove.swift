@@ -17,7 +17,7 @@ class Gove: SKSpriteNode, GameSprite {
         createAnimations()
         self.size = size
         self.position = position
-        self.runAction(flyAnimation)
+        self.run(flyAnimation)
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
@@ -29,8 +29,8 @@ class Gove: SKSpriteNode, GameSprite {
             textureAtlas.textureNamed("gove-1.png"),
             textureAtlas.textureNamed("gove-2.png")
         ]
-        let flyAction = SKAction.animateWithTextures(flyFrames, timePerFrame: 0.14)
-        flyAnimation = SKAction.repeatActionForever(flyAction)
+        let flyAction = SKAction.animate(with: flyFrames, timePerFrame: 0.14)
+        flyAnimation = SKAction.repeatForever(flyAction)
     }
     
     func onTap() {}

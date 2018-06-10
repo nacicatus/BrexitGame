@@ -37,12 +37,12 @@ class Coin: SKSpriteNode, GameSprite {
         self.physicsBody?.categoryBitMask = 0
         // Fade out, move up, and scale up the coin at the same time:
         let collectAnimation = SKAction.group([
-            SKAction.fadeAlphaTo(0, duration: 0.2),
-            SKAction.scaleTo(1.5, duration: 0.2),
-            SKAction.moveBy(CGVector(dx: 0, dy: 25), duration: 0.2)
+            SKAction.fadeAlpha(to: 0, duration: 0.2),
+            SKAction.scale(to: 1.5, duration: 0.2),
+            SKAction.move(by: CGVector(dx: 0, dy: 25), duration: 0.2)
             ])
         // After fading it out, move the coin out of the way until the encounter system wants to re-use it:
-        let resetAfterCollected = SKAction.runBlock {
+        let resetAfterCollected = SKAction.run {
             self.position.y = 5000
             self.alpha = 1
             self.xScale = 1
@@ -55,9 +55,9 @@ class Coin: SKSpriteNode, GameSprite {
             resetAfterCollected
             ])
         // Run the collect animation:
-        self.runAction(collectSequence)
+        self.run(collectSequence)
         // Play the coin sound:
-        self.runAction(coinSound)
+        self.run(coinSound)
     }
     
     func onTap() {}

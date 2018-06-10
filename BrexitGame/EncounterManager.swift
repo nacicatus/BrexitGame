@@ -31,31 +31,31 @@ class EncounterManager {
                         switch node.name! {
                         case "Immigrant":
                             let immigrant = Immigrant()
-                            immigrant.spawn(encounter, position: node.position)
+                            immigrant.spawn(parentNode: encounter, position: node.position)
                         case "Juncker":
                             let juncker = Juncker()
-                            juncker.spawn(encounter, position: node.position)
+                            juncker.spawn(parentNode: encounter, position: node.position)
                         case "Blade":
                             let blade = Blade()
-                            blade.spawn(encounter, position: node.position)
+                            blade.spawn(parentNode: encounter, position: node.position)
                         case "Cameron":
                             let cameron = Cameron()
-                            cameron.spawn(encounter, position: node.position)
+                            cameron.spawn(parentNode: encounter, position: node.position)
                         case "Gove":
                             let gove = Gove()
-                            gove.spawn(encounter, position: node.position)
+                            gove.spawn(parentNode: encounter, position: node.position)
                         case "GoldCoin":
                             let coin = Coin()
-                            coin.spawn(encounter, position: node.position)
+                            coin.spawn(parentNode: encounter, position: node.position)
                             coin.turnToGold()
                         case "BronzeCoin":
                             let coin = Coin()
-                            coin.spawn(encounter, position: node.position)
+                            coin.spawn(parentNode: encounter, position: node.position)
                         case "Star":
                             let star = Star()
-                            star.spawn(encounter, position: node.position)
+                            star.spawn(parentNode: encounter, position: node.position)
                         default:
-                            print("Encounter node name not found: \(node.name)")
+                            print("Encounter node name not found: \(String(describing: node.name))")
                         }
                     }
                 }
@@ -64,7 +64,7 @@ class EncounterManager {
             // Add the populated encounter node to the encounter array:
             encounters.append(encounter)
             // Save initial sprite positions for this encounter:
-            saveSpritePositions(encounter)
+            saveSpritePositions(node: encounter)
         }
     }
     
@@ -119,17 +119,17 @@ class EncounterManager {
         // Reset the new encounter and position it ahead of the player
         let encounter = encounters[currentEncounterIndex!]
         encounter.position = CGPoint(x: currentXPos + 1000, y: 0)
-        resetSpritePositions(encounter)
+        resetSpritePositions(node: encounter)
     }
     
     // Store the initial positions of the children of a node:
     func saveSpritePositions(node:SKNode) {
         for sprite in node.children {
             if let spriteNode = sprite as? SKSpriteNode {
-                let initialPositionValue = NSValue(CGPoint: sprite.position)
+                let initialPositionValue = NSValue(cgPoint: sprite.position)
                 spriteNode.userData = ["initialPosition": initialPositionValue]
                 // Recursively save the positions for children of this node:
-                saveSpritePositions(spriteNode)
+                saveSpritePositions(node: spriteNode)
             }
         }
     }
@@ -143,13 +143,13 @@ class EncounterManager {
                 spriteNode.physicsBody?.angularVelocity = 0
                 // Reset the rotation of the sprite:
                 spriteNode.zRotation = 0
-                if let initialPositionVal = spriteNode.userData?.valueForKey("initialPosition") as? NSValue {
+                if let initialPositionVal = spriteNode.userData?.value(forKey: "initialPosition") as? NSValue {
                     // Reset the position of the sprite:
-                    spriteNode.position = initialPositionVal.CGPointValue()
+                    spriteNode.position = initialPositionVal.cgPointValue
                 }
                 
                 // Reset positions on this node's children
-                resetSpritePositions(spriteNode)
+                resetSpritePositions(node: spriteNode)
             }
         }
     }

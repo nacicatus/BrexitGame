@@ -22,7 +22,7 @@ class Background: SKSpriteNode {
     
     func spawn(parentNode:SKNode, imageName:String, zPosition:CGFloat, movementMultiplier:CGFloat) {
         // Position from the bottom left:
-        self.anchorPoint = CGPointZero
+        self.anchorPoint = CGPoint.zero
         // Start backgrounds at the top of the ground (30 on the y-axis):
         self.position = CGPoint(x: 0, y: 30)
         // We can control the order of the backgrounds with zPosition:
@@ -41,7 +41,7 @@ class Background: SKSpriteNode {
             // Set the size for this node from our backgroundSize constant:
             newBGNode.size = backgroundSize
             // Position these nodes by their lower left corner:
-            newBGNode.anchorPoint = CGPointZero
+            newBGNode.anchorPoint = CGPoint.zero
             // Position this background node:
             newBGNode.position = CGPoint(x: i * Int(backgroundSize.width), y: 0)
             // Add the node to the Background:

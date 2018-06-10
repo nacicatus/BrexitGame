@@ -26,18 +26,19 @@ class HUD: SKNode {
         coinIcon.position = CGPoint(x: 23, y: coinYPos)
         // Configure the coin text label:
         coinCountText.fontName = "AvenirNext-HeavyItalic"
-        coinCountText.color = UIColor.blackColor()
+        coinCountText.color = UIColor.black
         coinCountText.position = CGPoint(x: 41, y: coinYPos)
         
         // These two properties allow you to align the text relative to the SKLabelNode's position:
-        coinCountText.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
-        coinCountText.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center
+        coinCountText.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
+        coinCountText.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         // Add the text label and coin icon to the HUD:
         self.addChild(coinCountText)
         self.addChild(coinIcon)
         
         // Create three heart nodes for the life meter:
-        for var index = 0; index < 3; ++index {
+        var index = 0
+        repeat {
             let newHeartNode = SKSpriteNode(texture: textureAtlas.textureNamed("heart-full.png"))
             newHeartNode.size = CGSize(width: 46, height: 40)
             // Position the heart nodes in a row, just below the coin counter:
@@ -48,7 +49,8 @@ class HUD: SKNode {
             heartNodes.append(newHeartNode)
             // Add the heart nodes to the HUD:
             self.addChild(newHeartNode)
-        }
+            index += 1
+        } while index < 3
         
         // Add the restart and menu button textures to the nodes:
         restartButton.texture = textureAtlas.textureNamed("button-restart.png")
@@ -73,34 +75,36 @@ class HUD: SKNode {
         self.addChild(restartButton)
         self.addChild(menuButton)
         // Fade in the buttons:
-        let fadeAnimation = SKAction.fadeAlphaTo(1, duration: 0.4)
-        restartButton.runAction(fadeAnimation)
-        menuButton.runAction(fadeAnimation)
+        let fadeAnimation = SKAction.fadeAlpha(to: 1, duration: 0.4)
+        restartButton.run(fadeAnimation)
+        menuButton.run(fadeAnimation)
     }
     
     func setCoinCountDisplay(newCoinCount:Int) {
         // We can use the NSNumberFormatter class to pad leading 0's onto the coin count:
-        let formatter = NSNumberFormatter()
+        let formatter = NumberFormatter()
         formatter.minimumIntegerDigits = 6
-        if let coinStr = formatter.stringFromNumber(newCoinCount) {
-            // Update the label node with the new coin count:
-            coinCountText.text = coinStr
-        }
+        let coinStr = String(newCoinCount)
+        // Update the label node with the new coin count:
+        coinCountText.text = coinStr
     }
     
     func setHealthDisplay(newHealth:Int) {
         // Create a fade SKAction to fade out any lost hearts:
-        let fadeAction = SKAction.fadeAlphaTo(0.2, duration: 0.3)
+        let fadeAction = SKAction.fadeAlpha(to: 0.2, duration: 0.3)
         // Loop through each heart and update its status:
-        for var index = 0; index < heartNodes.count; ++index {
+        var index = 0
+        repeat {
             if index < newHealth {
                 // This heart should be full red:
                 heartNodes[index].alpha = 1
             }
             else {
                 // This heart should be faded:
-                heartNodes[index].runAction(fadeAction)
+                heartNodes[index].run(fadeAction)
             }
-        }
+            index += 1
+        } while index < heartNodes.count
+        
     }
 }

@@ -12,12 +12,12 @@ import AVFoundation
 
 extension SKNode {
     class func unarchiveFromFile(file: String) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+        if let path = Bundle.main.path(forResource: file, ofType: "sks") {
+            let sceneData = try! NSData(contentsOfFile: path, options: .mappedIfSafe)
+            let archiver = NSKeyedUnarchiver(forReadingWith: sceneData as Data)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+            let scene = archiver.decodeObject(forKey: NSKeyedArchiveRootObjectKey) as! GameScene
             archiver.finishDecoding()
             return scene
         } else {
@@ -43,22 +43,22 @@ class GameViewController: UIViewController {
         skView.presentScene(menuScene)
         
         // Start the background music:
-        let musicUrl = NSBundle.mainBundle().URLForResource(
-            "Sound/BackgroundMusic.m4a", withExtension: nil)
+        let musicUrl = Bundle.main.url(
+            forResource: "Sound/BackgroundMusic.m4a", withExtension: nil)
     
         if let url = musicUrl {
-            musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+            musicPlayer = try! AVAudioPlayer(contentsOf: url)
             musicPlayer.numberOfLoops = -1
             musicPlayer.prepareToPlay()
             musicPlayer.play()
         }
     }
-    override func shouldAutorotate() -> Bool {
+    func shouldAutorotate() -> Bool {
         return true
     }
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-            return UIInterfaceOrientationMask.Landscape
+    func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,7 +66,7 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    func prefersStatusBarHidden() -> Bool {
         return true
     }
 }

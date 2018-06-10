@@ -22,7 +22,7 @@ class Cameron: SKSpriteNode, GameSprite {
         self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
         self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPolitician.rawValue
         self.texture = textureAtlas.textureNamed("cameron.png")
-        self.runAction(fadeAnimation)
+        self.run(fadeAnimation)
         // Cameron is a ghost!
         self.alpha = 0.8;
     }
@@ -31,18 +31,18 @@ class Cameron: SKSpriteNode, GameSprite {
         // Create a fade out action group:
         // The ghost becomes slightly smaller and more transparent.
         let fadeOutGroup = SKAction.group([
-            SKAction.fadeAlphaTo(0.3, duration: 2),
-            SKAction.scaleTo(0.8, duration: 2)
+            SKAction.fadeAlpha(to: 0.3, duration: 2),
+            SKAction.scale(to: 0.8, duration: 2)
             ]);
         // Create a fade in action group:
         // The ghost returns to full size and initial transparency.
         let fadeInGroup = SKAction.group([
-            SKAction.fadeAlphaTo(0.8, duration: 2),
-            SKAction.scaleTo(1, duration: 2)
+            SKAction.fadeAlpha(to: 0.8, duration: 2),
+            SKAction.scale(to: 1, duration: 2)
             ]);
         // Package the groups into a sequence, then a repeatActionForever action:
         let fadeSequence = SKAction.sequence([fadeOutGroup, fadeInGroup])
-        fadeAnimation = SKAction.repeatActionForever(fadeSequence)
+        fadeAnimation = SKAction.repeatForever(fadeSequence)
     }
     
     func onTap() {}

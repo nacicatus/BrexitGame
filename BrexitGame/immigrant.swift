@@ -17,7 +17,7 @@ class Immigrant: SKSpriteNode, GameSprite {
         createAnimations()
         self.size = size
         self.position = position
-        self.runAction(flyAnimation)
+        self.run(flyAnimation)
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
@@ -32,8 +32,8 @@ class Immigrant: SKSpriteNode, GameSprite {
             textureAtlas.textureNamed("immigrant-3.png"),
             textureAtlas.textureNamed("immigrant-2.png")
         ]
-        let flyAction = SKAction.animateWithTextures(flyFrames, timePerFrame: 0.06)
-        flyAnimation = SKAction.repeatActionForever(flyAction)
+        let flyAction = SKAction.animate(with: flyFrames, timePerFrame: 0.06)
+        flyAnimation = SKAction.repeatForever(flyAction)
     }
     
     func onTap() {

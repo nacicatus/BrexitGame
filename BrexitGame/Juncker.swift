@@ -17,7 +17,7 @@ class Juncker: SKSpriteNode, GameSprite {
         createAnimations()
         self.size = size
         self.position = position
-        self.runAction(flyAnimation)
+        self.run(flyAnimation)
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
@@ -26,8 +26,8 @@ class Juncker: SKSpriteNode, GameSprite {
     
     func createAnimations() {
         let flyFrames:[SKTexture] = [textureAtlas.textureNamed("juncker.png"), textureAtlas.textureNamed("juncker_fly.png")]
-        let flyAction = SKAction.animateWithTextures(flyFrames, timePerFrame: 0.14)
-        flyAnimation = SKAction.repeatActionForever(flyAction)
+        let flyAction = SKAction.animate(with: flyFrames, timePerFrame: 0.14)
+        flyAnimation = SKAction.repeatForever(flyAction)
     }
     
     func onTap() {}

@@ -23,7 +23,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var coinsCollected = 0
     var backgrounds:[Background] = []
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         // Set a sky-blue background color:
         self.backgroundColor = UIColor(red: 0.05, green: 0.5, blue: 0.45, alpha: 1.0)
         
@@ -34,18 +34,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         screenCenterY = self.size.height / 2
         
         // Add the encounters as children of the world:
-        encounterManager.addEncountersToWorld(self.world)
+        encounterManager.addEncountersToWorld(world: self.world)
         
         // Spawn the ground:
         let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width * 3, height: 0)
-        ground.spawn(world, position: groundPosition, size: groundSize)
+        ground.spawn(parentNode: world, position: groundPosition, size: groundSize)
         
         // Spawn the star, out of the way for now
-        powerUpStar.spawn(world, position: CGPoint(x: -2000, y: -2000))
+        powerUpStar.spawn(parentNode: world, position: CGPoint(x: -2000, y: -2000))
         
         // Spawn the player:
-        player.spawn(world, position: initialPlayerPosition)
+        player.spawn(parentNode: world, position: initialPlayerPosition)
         
         // Set gravity
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
@@ -54,7 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         // Create the HUD's child nodes:
-        hud.createHudNodes(self.size)
+        hud.createHudNodes(screenSize: self.size)
         // Add the HUD to the scene:
         self.addChild(hud)
         // Position the HUD in front of any other game element
@@ -65,13 +65,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             backgrounds.append(Background())
         }
         // Spawn the new backgrounds:
-        backgrounds[0].spawn(world, imageName: "Background-1", zPosition: -5, movementMultiplier: 0.75)
-        backgrounds[1].spawn(world, imageName: "Background-2", zPosition: -10, movementMultiplier: 0.5)
-        backgrounds[2].spawn(world, imageName: "Background-3", zPosition: -15, movementMultiplier: 0.2)
-        backgrounds[3].spawn(world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
+        backgrounds[0].spawn(parentNode: world, imageName: "Background-1", zPosition: -5, movementMultiplier: 0.75)
+        backgrounds[1].spawn(parentNode: world, imageName: "Background-2", zPosition: -10, movementMultiplier: 0.5)
+        backgrounds[2].spawn(parentNode: world, imageName: "Background-3", zPosition: -15, movementMultiplier: 0.2)
+        backgrounds[3].spawn(parentNode: world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
         
         // Play the start sound:
-        self.runAction(SKAction.playSoundFileNamed("Sound/Powerup.aif", waitForCompletion: false))
+        self.run(SKAction.playSoundFileNamed("Sound/Powerup.aif", waitForCompletion: false))
     }
     
     override func didSimulatePhysics() {
@@ -97,11 +97,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         playerProgress = player.position.x - initialPlayerPosition.x
         
         // Check to see if the ground should jump forward:
-        ground.checkForReposition(playerProgress)
+        ground.checkForReposition(playerProgress: playerProgress)
         
         // Check to see if we should set a new encounter:
         if player.position.x > nextEncounterSpawnPosition {
-            encounterManager.placeNextEncounter(nextEncounterSpawnPosition)
+            encounterManager.placeNextEncounter(currentXPos: nextEncounterSpawnPosition)
             nextEncounterSpawnPosition += 1400
             
             // Each encounter has a 1 in 10 chance of spawning a star power-up:
@@ -119,7 +119,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Position the backgrounds:
         for background in self.backgrounds {
-            background.updatePosition(playerProgress)
+            background.updatePosition(playerProgress: playerProgress)
         }
     }
     
@@ -141,16 +141,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         switch otherBody.categoryBitMask {
         case PhysicsCategory.ground.rawValue:
             player.takeDamage()
-            hud.setHealthDisplay(player.health)
+            hud.setHealthDisplay(newHealth: player.health)
         case PhysicsCategory.enemy.rawValue:
             player.takeDamage()
-            hud.setHealthDisplay(player.health)
+            hud.setHealthDisplay(newHealth: player.health)
         case PhysicsCategory.coin.rawValue:
             // Try to cast the otherBody's node as a Coin:
             if let coin = otherBody.node as? Coin {
                 coin.collect()
                 self.coinsCollected += coin.value
-                hud.setCoinCountDisplay(self.coinsCollected)
+                hud.setCoinCountDisplay(newCoinCount: self.coinsCollected)
             }
         case PhysicsCategory.powerup.rawValue:
             player.starPower()
@@ -165,12 +165,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hud.showButtons()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         player.startFlapping()
         
         for touch in (touches ) {
-            let location = touch.locationInNode(self)
-            let nodeTouched = nodeAtPoint(location)
+            let location = touch.location(in: self)
+            let nodeTouched = atPoint(location)
             
             if let gameSprite = nodeTouched as? GameSprite {
                 gameSprite.onTap()
@@ -181,26 +181,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 // Transition to the new scene:
                 self.view?.presentScene(
                     GameScene(size: self.size),
-                    transition: .crossFadeWithDuration(0.6))
+                    transition: .crossFade(withDuration: 0.6))
             }
             else if nodeTouched.name == "returnToMenu" {
                 // Transition to the menu scene:
                 self.view?.presentScene(
                     MenuScene(size: self.size),
-                    transition: .crossFadeWithDuration(0.6))
+                    transition: .crossFade(withDuration: 0.6))
             }
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         player.stopFlapping()
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
         player.stopFlapping()
     }
     
-    override func update(currentTime: NSTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         player.update()
     }
 }

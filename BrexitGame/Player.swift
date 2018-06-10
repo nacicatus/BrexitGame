@@ -36,7 +36,7 @@ class Player : SKSpriteNode, GameSprite {
         createAnimations()
         self.size = size
         self.position = position
-        self.runAction(soarAnimation, withKey: "soarAnimation")
+        self.run(soarAnimation, withKey: "soarAnimation")
         
         let physicsTexture = textureAtlas.textureNamed("boris-flying-3.png")
         self.physicsBody = SKPhysicsBody(
@@ -70,18 +70,18 @@ class Player : SKSpriteNode, GameSprite {
         self.physicsBody?.velocity.dy = 50
         // Create an SKAction to start gravity after a small delay:
         let startGravitySequence = SKAction.sequence([
-            SKAction.waitForDuration(0.6),
-            SKAction.runBlock {
+            SKAction.wait(forDuration: 0.6),
+            SKAction.run {
                 self.physicsBody?.affectedByGravity = true
             }])
-        self.runAction(startGravitySequence)
+        self.run(startGravitySequence)
     }
     
     func createAnimations() {
-        let rotateUpAction = SKAction.rotateToAngle(0, duration: 0.475)
-        rotateUpAction.timingMode = .EaseOut
-        let rotateDownAction = SKAction.rotateToAngle(-1, duration: 0.8)
-        rotateDownAction.timingMode = .EaseIn
+        let rotateUpAction = SKAction.rotate(toAngle: 0, duration: 0.475)
+        rotateUpAction.timingMode = .easeOut
+        let rotateDownAction = SKAction.rotate(toAngle: -1, duration: 0.8)
+        rotateDownAction.timingMode = .easeIn
         
         // 
         let flyFrames:[SKTexture] = [
@@ -92,22 +92,22 @@ class Player : SKSpriteNode, GameSprite {
             textureAtlas.textureNamed("boris-flying-3.png"),
             textureAtlas.textureNamed("boris-flying-2.png")
         ]
-        let flyAction = SKAction.animateWithTextures(flyFrames, timePerFrame: 0.03)
+        let flyAction = SKAction.animate(with: flyFrames, timePerFrame: 0.03)
         flyAnimation = SKAction.group([
-            SKAction.repeatActionForever(flyAction),
+            SKAction.repeatForever(flyAction),
             rotateUpAction
             ])
         
         // Create the soaring animation, just one frame for now:
         let soarFrames:[SKTexture] = [textureAtlas.textureNamed("boris-flying-1.png")]
-        let soarAction = SKAction.animateWithTextures(soarFrames, timePerFrame: 1)
+        let soarAction = SKAction.animate(with: soarFrames, timePerFrame: 1)
         soarAnimation = SKAction.group([
-            SKAction.repeatActionForever(soarAction),
+            SKAction.repeatForever(soarAction),
             rotateDownAction
             ])
         
         // --- Create the taking damage animation ---
-        let damageStart = SKAction.runBlock {
+        let damageStart = SKAction.run {
             
             self.physicsBody?.categoryBitMask = PhysicsCategory.damagedPolitician.rawValue
            
@@ -115,20 +115,20 @@ class Player : SKSpriteNode, GameSprite {
         }
         // Create an opacity fade out and in, slow at first and fast at the end:
         let slowFade = SKAction.sequence([
-            SKAction.fadeAlphaTo(0.3, duration: 0.35),
-            SKAction.fadeAlphaTo(0.7, duration: 0.35)
+            SKAction.fadeAlpha(to: 0.3, duration: 0.35),
+            SKAction.fadeAlpha(to: 0.7, duration: 0.35)
             ])
         let fastFade = SKAction.sequence([
-            SKAction.fadeAlphaTo(0.3, duration: 0.2),
-            SKAction.fadeAlphaTo(0.7, duration: 0.2)
+            SKAction.fadeAlpha(to: 0.3, duration: 0.2),
+            SKAction.fadeAlpha(to: 0.7, duration: 0.2)
             ])
         let fadeOutAndIn = SKAction.sequence([
-            SKAction.repeatAction(slowFade, count: 2),
-            SKAction.repeatAction(fastFade, count: 5),
-            SKAction.fadeAlphaTo(1, duration: 0.15)
+            SKAction.repeat(slowFade, count: 2),
+            SKAction.repeat(fastFade, count: 5),
+            SKAction.fadeAlpha(to: 1, duration: 0.15)
             ])
         // Return Boris to normal:
-        let damageEnd = SKAction.runBlock {
+        let damageEnd = SKAction.run {
             self.physicsBody?.categoryBitMask = PhysicsCategory.politician.rawValue
             // Collide with everything again:
             self.physicsBody?.collisionBitMask = 0xFFFFFFFF
@@ -143,7 +143,7 @@ class Player : SKSpriteNode, GameSprite {
         
         
         /* --- Create the death animation --- */
-        let startDie = SKAction.runBlock {
+        let startDie = SKAction.run {
             // Switch to the death texture:
             self.texture = self.textureAtlas.textureNamed("boris-dead.png")
             // Suspend the penguin in space:
@@ -154,7 +154,7 @@ class Player : SKSpriteNode, GameSprite {
             self.physicsBody?.collisionBitMask = PhysicsCategory.ground.rawValue
         }
         
-        let endDie = SKAction.runBlock {
+        let endDie = SKAction.run {
             // Turn gravity back on:
             self.physicsBody?.affectedByGravity = true
         }
@@ -162,12 +162,12 @@ class Player : SKSpriteNode, GameSprite {
         self.dieAnimation = SKAction.sequence([
             startDie,
             // Scale Boris bigger:
-            SKAction.scaleTo(2.2, duration: 0.5),
+            SKAction.scale(to: 2.2, duration: 0.5),
             // Use the waitForDuration action to provide a short pause:
-            SKAction.waitForDuration(0.5),
+            SKAction.wait(forDuration: 0.5),
             // Rotate Boris
-            SKAction.rotateToAngle(3, duration: 1.5),
-            SKAction.waitForDuration(0.5),
+            SKAction.rotate(toAngle: 3, duration: 1.5),
+            SKAction.wait(forDuration: 0.5),
             endDie
             ])
     }
@@ -192,9 +192,9 @@ class Player : SKSpriteNode, GameSprite {
         // We need to limit Boris's top speed as he shoots up the y-axis.
         // This prevents him from building up enough momentum to shoot high
         // over our max height. We are bending the physics to improve the gameplay:
-        if (self.physicsBody?.velocity.dy > 300) {
-            self.physicsBody?.velocity.dy = 300
-        }
+//        if (self.physicsBody?.velocity.dy > 300) {
+//            self.physicsBody?.velocity.dy = 300
+//        }
         
         // Set a constant velocity to the right:
         self.physicsBody?.velocity.dx = self.forwardVelocity
@@ -204,8 +204,8 @@ class Player : SKSpriteNode, GameSprite {
     func startFlapping() {
         if self.health <= 0 { return }
         
-        self.removeActionForKey("soarAnimation")
-        self.runAction(flyAnimation, withKey: "flapAnimation")
+        self.removeAction(forKey: "soarAnimation")
+        self.run(flyAnimation, withKey: "flapAnimation")
         self.flapping = true
     }
     
@@ -213,8 +213,8 @@ class Player : SKSpriteNode, GameSprite {
     func stopFlapping() {
         if self.health <= 0 { return }
         
-        self.removeActionForKey("flapAnimation")
-        self.runAction(soarAnimation, withKey: "soarAnimation")
+        self.removeAction(forKey: "flapAnimation")
+        self.run(soarAnimation, withKey: "soarAnimation")
         self.flapping = false
     }
     
@@ -225,7 +225,7 @@ class Player : SKSpriteNode, GameSprite {
         self.damaged = true
         
         // Remove one from our health pool
-        self.health--
+        self.health -= 1
         
         if self.health == 0 {
             // If we are out of health, run the die function:
@@ -233,17 +233,17 @@ class Player : SKSpriteNode, GameSprite {
         }
         else {
             // Run the take damage animation:
-            self.runAction(self.damageAnimation)
+            self.run(self.damageAnimation)
         }
         
         // Play the hurt sound:
-        self.runAction(hurtSound)
+        self.run(hurtSound)
     }
     
     func starPower() {
         // Remove any existing star powerup animation:
         // (if the player is already under the power of another star)
-        self.removeActionForKey("starPower")
+        self.removeAction(forKey: "starPower")
         // Grant great forward speed:
         self.forwardVelocity = 400
         // Make the player invulnerable:
@@ -252,18 +252,18 @@ class Player : SKSpriteNode, GameSprite {
         // wait 8 seconds, then scale back down and turn off
         // invulnerability, returning the player to normal speed:
         let starSequence = SKAction.sequence([
-            SKAction.scaleTo(1.5, duration: 0.3),
-            SKAction.waitForDuration(8),
-            SKAction.scaleTo(1, duration: 1),
-            SKAction.runBlock {
+            SKAction.scale(to: 1.5, duration: 0.3),
+            SKAction.wait(forDuration: 8),
+            SKAction.scale(to: 1, duration: 1),
+            SKAction.run {
                 self.forwardVelocity = 200
                 self.invulnerable = false
             }
             ])
         // Execute the sequence:
-        self.runAction(starSequence, withKey: "starPower")
+        self.run(starSequence, withKey: "starPower")
         // Play the powerup sound:
-        self.runAction(powerupSound)
+        self.run(powerupSound)
     }
     
     func die() {
@@ -272,7 +272,7 @@ class Player : SKSpriteNode, GameSprite {
         // Remove all animations:
         self.removeAllActions()
         // Run the die animation:
-        self.runAction(self.dieAnimation)
+        self.run(self.dieAnimation)
         // Prevent any further upward movement:
         self.flapping = false
         // Stop forward movement:
